@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "gundam"
+version = "0.1.0"
+description = "I AM Gundam"
+authors = ["KAWAI Shun"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.0.1"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+poethepoet = "^0.10.0"
+
+[tool.poetry.scripts]
+gundam = "gundam.main:ctx"
+
+[tool.poe.tasks]
+lint = "flake8 gundam"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
